@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="light dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page">
+      <img class="bg-pic" src="bg-pic.jpg" alt="Фоновое изображение" />
+
+      <form class="form" action="example.com/path" method="post">
+        <p class="form__heading">Please fill in your unique admin login details below</p>
+        <div class="form__group">
+          <label class="form__label" for="user_email">Email address</label>
+          <input
+            class="form__input"
+            type="email"
+            id="user_email"
+            name="email"
+            required
+          />
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="user_password">Password</label>
+          <input
+            class="form__input"
+            type="password"
+            id="user_password"
+            name="password"
+            required
+            pattern="/^[a-zA-Z0-9]+/"
+          />
+        </div>
+        <!-- в пароле точно должны цифры, латинские буквы верхнего и нижнего регистра. -->
+        <p class="form__link">No account?<a class="link">Create one</a></p>
+        <button class="form__button" type="submit">Log In</button>
+      </form>
+      <button class="theme-toggle">Change Theme</button>
+</div>
+    </div>
+  </body>
+  <script src="/theme.js"></script>
+</html>
